@@ -1,7 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { :host => 'https://rails-projects-mwade.c9users.io'}
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -10,6 +8,8 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'https://rails-projects-mwade.c9users.io'}
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
