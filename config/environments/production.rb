@@ -10,7 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'stormy-citadel-70321.herokuapp.com', :protocol => 'https'}
+  config.action_mailer.default_url_options = { :host => 'pix-bucket.herokuapp.com', :protocol => 'https'}
 
 
   # Full error reports are disabled and caching is turned on.
