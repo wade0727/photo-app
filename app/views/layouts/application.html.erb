@@ -47,13 +47,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Pix Bucket</a>
+        <%= link_to "Pix Bucket", root_path, class: "navbar-brand" %>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <% if logged_in? %>
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "My Pictures", images_path  %></li>
+            <!--<li><%= link_to "Link2", "/path2"  %></li>-->
+            <!--<li><%= link_to "Link3", "/path3"  %></li>-->
           </ul>
+          <% end %>
           <ul class="nav navbar-right col-md-4">
             <% if current_user %>
               <li class="col-md-8 user-name">
