@@ -25,15 +25,17 @@
   <div class="control-group">
     <%= f.label :picture, :class => 'control-label' %>
     <div class="controls">
-      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+      <%= f.file_field :picture, multiple: true, name: "picture[image]", accept: 'image/jpeg,image/gif,image/png' %>
     </div>
     <%=f.error_span(:name) %>
   </div>
+  
 
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             images_path, :class => 'btn btn-default' %>
+            
 
 <% end %>
 
